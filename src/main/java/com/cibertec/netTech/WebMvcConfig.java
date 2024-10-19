@@ -20,7 +20,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
     	registry.addInterceptor(new AuthInterceptor())
         .addPathPatterns("/auth/**", "/admin", "/dashboard", "/dashboard/**") // Aplicar a todas las rutas
-        .excludePathPatterns("/css/**", "/icons/**", "/images/**"); // Excluir
+        .excludePathPatterns("/css/**", "/icons/**", "/images/**", "/report/**"); // Excluir
         registry.addInterceptor(new MenuInterceptor());
     }
     
